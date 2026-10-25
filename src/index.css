@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Sora', sans-serif;
+    background-color: #0d0a1a;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(120, 50, 255, 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 10% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Domine', serif;
+  }
+}
+
+/* Custom Glassmorphism Cards */
+.astro-card {
+  background: rgba(26, 20, 56, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.astro-glow {
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.3);
+}
+
+/* Animation utilities */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+}
